@@ -52,11 +52,11 @@ vector<cd> fft(vector<cd>& a)
 //driver code
 int main()
 {
-    vector<cd> a(1000000000);
-    for(int i=0;i<1000000000;i++)
+    vector<cd> a(1000);
+    for(int i=0;i<1000;i++)
         a[i]=i+1;
     vector<cd> b=fft(a);
-    for(int i=0;i<1000000000;i++)
+    for(int i=0;i<1000;i++)
     {
         cout<<b[i]<<endl;
     }
