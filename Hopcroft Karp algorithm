@@ -36,6 +36,8 @@ public:
 //Returns size of maximum mathing
 int BipGraph::hopcroftKarp()
 {
+    //the index of points starts from 1
+
     //pairU[u] stores pair of u in matching where u
     //is a vertex on left side of Bipartite Graph.
     //If u dosen't have any pair,then pairU[u] is NIL
@@ -48,8 +50,9 @@ int BipGraph::hopcroftKarp()
     //dist[u] stores distance of left side vertices
     //dist[u] is one more than dist[u'] if u is next
     //to u' in augmenting path
+    dist=new int[m+1];
 
-    //initialize NIL as pair of all vertices
+    //initialize NIL as pair of all vertices,indicate a free vertex
     for(int u=0;u<=m;u++) pairU[u]=NIL;
     for(int v=0;v<=n;v++) pairV[v]=NIL;
 
@@ -91,7 +94,7 @@ bool BipGraph::bfs()
             Q.push(u);
         }
         //else set distance as infinite so that this vertex
-        //is considered next time
+        //not is considered next time,because it is not a free vertex
         else dist[u]=INF;
     }
 
@@ -124,8 +127,9 @@ bool BipGraph::bfs()
             }
         }
     }
-    //if we could come back to NIL using alternating path of distinct
-    //vertices then there is an augmenting path
+    //if dist[NIL] is not equal to INF,we can confirm that
+    //we've arrived at v that pairV[v] is equal to NIL.
+    //so we get a augmenting path
     return (dist[NIL]!=INF);
 }
 
