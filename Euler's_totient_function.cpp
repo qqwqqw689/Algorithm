@@ -1,5 +1,5 @@
-// https://cp-algorithms.com/algebra/phi-function.html
-// Euler's totient function
+//  https://cp-algorithms.com/algebra/phi-function.html
+//  Euler's totient function
 
 #include <bits/stdc++.h>
 using namespace std;
