@@ -17,7 +17,7 @@ pair<int,int> combine(pair<int,int> a,pair<int,int> b)
     if(b.first>a.first)
         return b;
     return make_pair(a.first,a.second+b.second);
-};
+}
 
 void build(int a[],int v,int tl,int tr)
 {
