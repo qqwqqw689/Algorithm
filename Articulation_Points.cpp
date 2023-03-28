@@ -50,7 +50,7 @@ int main()
     AP();
     for(int i = 0; i < adj.size(); i++) {
         if(ap[i] > 0)
-            cout << i;
+            cout << i << endl;
     }
     return 0;
 }
