@@ -1,5 +1,6 @@
 // Disjoint set Union
 // https://cp-algorithms.com/data_structures/disjoint_set_union.html
+// application: problem of painting subarrays
 
 #include <bits/stdc++.h>
 #define N 10
