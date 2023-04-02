@@ -15,9 +15,6 @@ void make_set(int v) {
     rank[v] = 0;
 }
 
-// find_set(v) - returns the representative (also called leader) of the set that contains the element v
-// Path compression optimization
-
 std::pair<int, int> find_set(int v) {
     /*
     return <the representative of the set, the distance to it>
