@@ -1,4 +1,4 @@
-// Disjoint set Union (support distances up to representative)
+// Disjoint set Union(support distances up to representative)
 // https://cp-algorithms.com/data_structures/disjoint_set_union.html#support-distances-up-to-representative
 // application: support dstances up to representative
 
