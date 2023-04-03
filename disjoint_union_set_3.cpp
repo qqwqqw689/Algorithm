@@ -55,5 +55,6 @@ int main()
             answer[q.idx] = a[find_set[q.L]];
         }
     }
+    
     return 0;
 }
