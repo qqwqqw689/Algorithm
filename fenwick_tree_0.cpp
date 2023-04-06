@@ -6,29 +6,32 @@ struct FenwickTree {
     std::vector<int> bit; // binary indexed tree bit[i] = sum(A[g(i),i])
     int n;
 
-    FenwickTree(int n) {
-        this->n = n;
-        bit.assign(n,0); // n copies of 0
+    FenwickTree(int nn) {
+        this->n = nn + 1;
+        bit.assign(nn + 1,0); // nn copies of 0
     }
 
     FenwickTree(std::vector<int> const &a) : FenwickTree(a.size()) {
         for (size_t i = 0; i < n; i++) {
-            bit[i] += a[i]; // linear construction O(N)
-            int r = i | (i+1);
-            if (r < n) bit[r] += bit[i];
+            add(i, a[i]);
         }
             
     }
 
     int sum(int r) {
         int ret = 0;
-        for(; r >= 0; r = (r & (r + 1)) - 1)
+        for(++r; r > 0; r -= r & -r)
             ret += bit[r];
         return ret;
     }
 
     int sum(int l, int r) {
         return sum(r) - sum(l-1);
+    }
+
+    void add(int idx, int delta) {
+        for (++idx; idx < n; idx += idx & -idx)
+            bit[idx] += delta;
     }
 };
 
