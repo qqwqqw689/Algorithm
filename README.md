@@ -1,2 +1,2 @@
 # Algorithm
-just some useful algorithm
+just some useful algorithms
