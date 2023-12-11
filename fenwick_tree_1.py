@@ -12,6 +12,7 @@ class FenwickTree:
 
     def LSB(self, x):
         return x & (-x) # toggling of the last set 1 bit in the binary representation of i
+    # 42 = 00101010  -42 = 11010110  (42)&(-42) = 00000010
     
     def update(self, x, y, val):
         while x <= self.m:
