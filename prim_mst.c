@@ -6,16 +6,17 @@
 #define INF 9999999
 
 // number of vertices in graph
-#define V 5
+#define V 6
 
 // create a 2d array of size 5x5
 //for adjacency matrix to represent graph
 int G[V][V] = {
-  {0, 9, 75, 0, 0},
-  {9, 0, 95, 19, 42},
-  {75, 95, 0, 51, 66},
-  {0, 19, 51, 0, 31},
-  {0, 42, 66, 31, 0}};
+  {0, 6, 1, 5, 0, 0},
+  {6, 0, 5, 0, 3, 0},
+  {1, 5, 0, 5, 6, 4},
+  {5, 0, 5, 0, 0, 2},
+  {0, 3, 6, 0, 0, 6},
+  {0, 0, 4, 2, 6, 0}};
 
 int main() {
   int no_edge;  // number of edge
